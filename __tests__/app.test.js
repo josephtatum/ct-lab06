@@ -3,7 +3,7 @@ const app = require('../lib/app');
 
 describe('createResponse', () => {
 
-  it('should return a string "hi" when a user hits the "/" endpoint', async (done) => {
+  it('should return a string "hi" when a user hits the "/" endpoint', async(done) => {
     return request(app)
       .get('/')
       .then(res => {
@@ -12,7 +12,7 @@ describe('createResponse', () => {
       });
   });
 
-  it('should return <h1>red</h1> when a user hits the "red" endpoint', async (done) => {
+  it('should return <h1>red</h1> when a user hits the "red" endpoint', async(done) => {
     return request(app)
       .get('/red')
       .then(res => {
@@ -21,7 +21,7 @@ describe('createResponse', () => {
       });
   });
 
-  it('should return <h1>blue</h1> when a user hits the "blue" endpoint', async (done) => {
+  it('should return <h1>blue</h1> when a user hits the "blue" endpoint', async(done) => {
     return request(app)
       .get('/blue')
       .then(res => {
@@ -30,7 +30,7 @@ describe('createResponse', () => {
       });
   });
 
-  it('should return <h1>green</h1> when a user hits the "green" endpoint', async (done) => {
+  it('should return <h1>green</h1> when a user hits the "green" endpoint', async(done) => {
     return request(app)
       .get('/green')
       .then(res => {
