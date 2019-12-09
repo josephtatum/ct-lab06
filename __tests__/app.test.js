@@ -20,4 +20,22 @@ describe('createResponse', () => {
         done();
       });
   });
+
+  it('should return <h1>blue</h1> when a user hits the "blue" endpoint', async (done) => {
+    return request(app)
+      .get('/blue')
+      .then(res => {
+        expect(res.text).toEqual('<h1>blue</h1>');
+        done();
+      });
+  });
+
+  it('should return <h1>green</h1> when a user hits the "green" endpoint', async (done) => {
+    return request(app)
+      .get('/green')
+      .then(res => {
+        expect(res.text).toEqual('<h1>green</h1>');
+        done();
+      });
+  });
 });
