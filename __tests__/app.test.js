@@ -38,4 +38,16 @@ describe('createResponse', () => {
         done();
       });
   });
+
+  it('should return the body when a user hits the "echo" endpoint', async(done) => {
+    return request(app)
+      .post('/echo')
+      .send({
+        number: 1
+      })
+      .then(res => {
+        expect(res.text).toEqual('{"number":1}');
+        done();
+      });
+  });
 });
